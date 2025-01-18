@@ -12,7 +12,7 @@ export default function About() {
           </div>
       </div>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between flex-col lg:flex-row'>
         <img className='' src="https://michiganross.umich.edu/sites/default/files/styles/max_900x900/public/images/media/real.jpg?itok=p94fKmBk" alt="Business Photo" />
 
         <div className='p-5 flex flex-col gap-2 bg-gradient-to-r from-violet-950 to-violet-800'>
