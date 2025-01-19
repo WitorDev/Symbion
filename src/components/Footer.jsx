@@ -7,7 +7,7 @@ export default function Footer() {
             <div className='flex items-center gap-2'>
                 <img 
                 className='w-14'
-                src="./src/assets/logo.webp" 
+                src="/assets/logo.webp" 
                 alt="Logo" />
                 <div className='flex flex-col items-start'>
                     <h1 className='font-bold text-xl'>Symbion</h1>

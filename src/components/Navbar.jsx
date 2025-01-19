@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className='m-4 min-h-20 bg-gradient-to-r from-violet-700 to-violet-900 flex justify-between items-center'>
 
-            <img className='w-20' src="./src/assets/logo.webp" alt="Logo" />
+            <img className='w-20' src="/assets/logo.webp" alt="Logo" />
 
             <ul className='w-1/2 mx-10 flex flex-row justify-between'>
 
