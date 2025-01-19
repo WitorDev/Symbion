@@ -1,6 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import L, { Icon } from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+
+// Define the custom marker icon
+const customMarkerIcon = new L.Icon({
+  iconUrl: '/assets/search.png', // Replace with the path to your custom icon
+  iconSize: [32, 32], // Set the size of the icon
+  iconAnchor: [16, 32], // Set the anchor point of the icon
+  popupAnchor: [0, -32] // Set the anchor point for the popup
+});
 
 const Map = ({ height, width }) => {
   const mapRef = useRef(null);
@@ -22,8 +30,8 @@ const Map = ({ height, width }) => {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(mapInstanceRef.current);
 
-    // Add a marker at Londrina's coordinates
-    L.marker([londrinaCoordinates.lat, londrinaCoordinates.lng]).addTo(mapInstanceRef.current)
+    // Add a marker with the custom icon at Londrina's coordinates
+    L.marker([londrinaCoordinates.lat, londrinaCoordinates.lng], { icon: customMarkerIcon }).addTo(mapInstanceRef.current)
       .bindPopup('The Symbion Company.')
       .openPopup();
 
