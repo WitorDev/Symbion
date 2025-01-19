@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Map from './Map'
 
 export default function About() {
+  const [mapExpanded, setMapExpanded] = useState(false)
+  let smallHeight = 200
+  let bigHeight = 500
+  let smallWidth = 300
+  let bigWidth = 500
+
+  function handleClick() {
+      if (mapExpanded){
+          setMapExpanded(false)
+      } else {
+          setMapExpanded(true)
+      }
+  }
+
   return (
   <main className='text-white mx-4 flex flex-col items-center gap-5'>
     <div className='py-20 bg-violet-900 flex flex-col gap-10 items-center'>
@@ -15,7 +30,7 @@ export default function About() {
       <div className='flex justify-between flex-col lg:flex-row'>
         <img className='' src="https://michiganross.umich.edu/sites/default/files/styles/max_900x900/public/images/media/real.jpg?itok=p94fKmBk" alt="Business Photo" />
 
-        <div className='p-5 flex flex-col gap-2 bg-gradient-to-r from-violet-950 to-violet-800'>
+        <div className='p-5 flex flex-col lg:mt-0 lg:ml-5 mt-5 gap-2 bg-gradient-to-r from-violet-950 to-violet-800'>
           <h1 className='text-2xl font-bold pb-2'>Our Story</h1>
           <p className='text-xl'>
           Founded in 2013, Symbion was born out of a desire to provide businesses with the tools and expertise they need to succeed in a rapidly changing world. 
@@ -42,8 +57,14 @@ export default function About() {
             <li>Customer-Centric: We put our clients at the center of everything we do.</li>
           </ul>
         </div>
+        <div className='mt-5 flex flex-col items-center justify-center'>
+              <h1 className='text-xl font-bold'>Find us:</h1>
+              <Map height={mapExpanded ? bigHeight : smallHeight} width={mapExpanded? bigWidth : smallWidth}/>
+              <button 
+              onClick={handleClick}
+              className='mt-2 bg-white hover:bg-blue-500 rounded-lg p-2 font-bold text-blue-500 hover:text-white'>{mapExpanded ? 'shrink...' : 'expand...'}</button>
+      </div>        
       </div>
-
     </main>
   )
 }
