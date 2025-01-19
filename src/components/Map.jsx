@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 
 // Define the custom marker icon
 const customMarkerIcon = new L.Icon({
-  iconUrl: '/assets/search.png', // Replace with the path to your custom icon
+  iconUrl: '/assets/marker.png', // Replace with the path to your custom icon
   iconSize: [32, 32], // Set the size of the icon
   iconAnchor: [16, 32], // Set the anchor point of the icon
   popupAnchor: [0, -32] // Set the anchor point for the popup
