@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-        <nav className='m-4 bg-gradient-to-r from-violet-700 to-violet-900 flex justify-between items-center'>
+        <nav className='m-4 min-h-20 bg-gradient-to-r from-violet-700 to-violet-900 flex justify-between items-center'>
 
             <img className='w-20' src="./src/assets/logo.webp" alt="Logo" />
 

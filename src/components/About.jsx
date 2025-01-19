@@ -28,7 +28,7 @@ export default function About() {
       </div>
 
       <div className='flex justify-between flex-col lg:flex-row'>
-        <img className='' src="https://michiganross.umich.edu/sites/default/files/styles/max_900x900/public/images/media/real.jpg?itok=p94fKmBk" alt="Business Photo" />
+        <img src="https://michiganross.umich.edu/sites/default/files/styles/max_900x900/public/images/media/real.jpg?itok=p94fKmBk" alt="Business Photo" />
 
         <div className='p-5 flex flex-col lg:mt-0 lg:ml-5 mt-5 gap-2 bg-gradient-to-r from-violet-950 to-violet-800'>
           <h1 className='text-2xl font-bold pb-2'>Our Story</h1>
